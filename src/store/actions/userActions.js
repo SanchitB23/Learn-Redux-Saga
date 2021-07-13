@@ -15,3 +15,8 @@ export const createUserRequest = ({firstName, lastName}) => ({
     firstName, lastName
   }
 })
+
+export const deleteUserRequest = (userId) => ({
+  type: ActionTypes.DELETE_USERS_REQUEST,
+  payload: {userId}
+})
