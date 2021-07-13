@@ -1,5 +1,12 @@
 import axios from "axios";
 
+export const createUser = ({firstName, lastName}) => {
+  return axios.post('/users', {
+    firstName, lastName
+  })
+}
+
+
 export const getUsers = () => {
   return axios.get('/users', {
     params: {

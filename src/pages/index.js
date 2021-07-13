@@ -2,7 +2,7 @@ import * as React from "react"
 import {useEffect} from "react"
 import axios from "axios";
 import {useDispatch, useSelector} from "react-redux";
-import {getUsersRequest} from "../store/actions/userActions";
+import {createUserRequest, getUsersRequest} from "../store/actions/userActions";
 import UsersList from "../components/UsersList";
 import NewUserForm from "../components/newUserForm";
 
@@ -21,7 +21,9 @@ const IndexPage = () => {
 
 
   const handleOnSubmit = ({firstName, lastName}) => {
-    console.log(firstName, lastName)
+    dispatch(createUserRequest({
+      firstName, lastName
+    }))
   }
   if (users.items.length < 0) return
 

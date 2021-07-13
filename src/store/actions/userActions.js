@@ -8,3 +8,10 @@ export const getUsersSuccess = ({items}) => ({
   type: ActionTypes.GET_USERS_SUCCESS,
   payload: items
 })
+
+export const createUserRequest = ({firstName, lastName}) => ({
+  type: ActionTypes.CREATE_USERS_REQUEST,
+  payload: {
+    firstName, lastName
+  }
+})
