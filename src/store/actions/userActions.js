@@ -20,3 +20,10 @@ export const deleteUserRequest = (userId) => ({
   type: ActionTypes.DELETE_USERS_REQUEST,
   payload: {userId}
 })
+
+export const usersError = ({error}) => ({
+  type: ActionTypes.USERS_ERROR,
+  payload: {
+    error
+  }
+});

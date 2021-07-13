@@ -5,4 +5,6 @@ export const ActionTypes = {
   CREATE_USERS_REQUEST: 'users/create_users_request',
 
   DELETE_USERS_REQUEST: 'users/delete_users_request',
+
+  USERS_ERROR: 'USERS_ERROR'
 }

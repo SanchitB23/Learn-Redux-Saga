@@ -11,7 +11,9 @@ function* getUsers() {
     }))
 
   } catch (e) {
-
+    yield put(actions.usersError({
+      error: 'An error Occurred'
+    }))
   }
 }
 
@@ -24,7 +26,9 @@ function* createUser(action) {
     yield call(api.createUser, {firstName: action.payload.firstName, lastName: action.payload.lastName})
     yield call(getUsers)
   } catch (e) {
-
+    yield put(actions.usersError({
+      error: 'An error Occurred'
+    }))
   }
 }
 
@@ -37,7 +41,9 @@ function* deleteUser({userId}) {
     yield call(api.deleteUser, userId)
     yield call(getUsers)
   } catch (e) {
-    console.log("handleOnDeleteUser error", e)
+    yield put(actions.usersError({
+      error: 'An error Occurred'
+    }))
   }
 }
 
