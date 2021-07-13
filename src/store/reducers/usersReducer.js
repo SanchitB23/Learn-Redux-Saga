@@ -7,7 +7,7 @@ export default function (state = INITIAL_STATE, action) {
   switch (action.type) {
     case ActionTypes.GET_USERS_SUCCESS:
       return {
-        items: action.payload.items
+        items: action.payload
       }
     default:
       return state

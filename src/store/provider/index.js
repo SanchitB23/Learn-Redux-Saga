@@ -2,7 +2,7 @@ import React from "react"
 import {Provider} from "react-redux"
 import store from "../store";
 
-
+import 'bootstrap/dist/css/bootstrap.min.css'
 // eslint-disable-next-line react/display-name,react/prop-types
 export default ({element}) => {
   // Instantiating store in `wrapRootElement` handler ensures:
